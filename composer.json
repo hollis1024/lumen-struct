@@ -1,0 +1,30 @@
+{
+  "name": "hollisho/lumen-struct",
+  "type": "library",
+  "description": "Base Struct For Lumen",
+  "keywords": [
+    "laravel",
+    "lumen",
+    "lumen-struct"
+  ],
+  "homepage": "https://github.com/hollisho/lumen-struct",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hollis Ho",
+      "email": "he_wenzhi@126.com",
+      "homepage": "https://www.1024plus.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "illuminate/database": "^5.7",
+    "illuminate/http": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "hollisho\\lumenstruct\\": "src"
+    }
+  }
+}
