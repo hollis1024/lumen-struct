@@ -15,4 +15,14 @@ class BaseQuery extends Builder
     {
         parent::__construct($connection, $grammar, $processor);
     }
+
+    public function getByProperty($property, $value)
+    {
+        return $this->where($property, $value);
+    }
+
+    public function getByPropertys($property, $values)
+    {
+        return $this->whereIn($property, $values);
+    }
 }
