@@ -1,6 +1,6 @@
 <?php
 
-namespace hollis1024\LumenStruct\Repository\Query;
+namespace hollis1024\lumen\struct\Repository\Query;
 
 
 

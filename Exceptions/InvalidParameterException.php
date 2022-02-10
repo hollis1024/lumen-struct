@@ -1,6 +1,6 @@
 <?php
 
-namespace hollis1024\LumenStruct\Exceptions;
+namespace hollis1024\lumen\struct\Exceptions;
 
 
 class InvalidParameterException extends RuntimeException

@@ -1,6 +1,6 @@
 <?php
 
-namespace hollis1024\LumenStruct;
+namespace hollis1024\lumen\struct;
 
 use \ReflectionClass;
 use \ReflectionException;

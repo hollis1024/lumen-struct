@@ -1,6 +1,6 @@
 <?php
 
-namespace hollis1024\LumenStruct\Bo;
+namespace hollis1024\lumen\struct\Bo;
 
 
 use Illuminate\Http\Request;
@@ -9,9 +9,23 @@ class BaseRequestBo extends BaseBo
 {
     private $request;
 
-    private $autoLoad = true;
+    /**
+     * 自动加载数据
+     * @var bool
+     */
+    protected $autoLoad = true;
 
-    private $autoValidate = true;
+    /**
+     * 自动验证数据
+     * @var bool
+     */
+    protected $autoValidate = true;
+
+    /**
+     * 验证不通过抛异常
+     * @var bool
+     */
+    protected $throwable = true;
 
     /**
      * BaseRequestBo constructor.
@@ -31,7 +45,7 @@ class BaseRequestBo extends BaseBo
             }
 
             $this->load($data);
-            $this->autoValidate && $this->validate(true);
+            $this->autoValidate && $this->validate($this->throwable);
             $this->request = $request;
         }
     }

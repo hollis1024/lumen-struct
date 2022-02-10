@@ -1,12 +1,13 @@
 <?php
 
-namespace hollis1024\LumenStruct\Model;
+namespace hollis1024\lumen\struct\Model;
 
-use hollis1024\LumenStruct\BaseObject;
-use hollis1024\LumenStruct\Exceptions\InvalidParameterException;
+use hollis1024\lumen\struct\BaseObject;
+use hollis1024\lumen\struct\Exceptions\InvalidParameterException;
 use Illuminate\Contracts\Validation\Factory;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Validation\ValidationException;
+use hollis1024\lumen\struct\Traits\ModelAttributes;
 
 class FormModel extends BaseObject
 {
@@ -84,26 +85,6 @@ class FormModel extends BaseObject
      */
     protected function setErrors(array $errors) {
         $this->errors = $errors;
-    }
-
-    /**
-     * @param $name
-     * @return mixed|null
-     * @throws \ReflectionException
-     */
-    public function __get($name)
-    {
-        return $this->getAttribute($name);
-    }
-
-    /**
-     * @param $name
-     * @param $value
-     * @throws \ReflectionException
-     */
-    public function __set($name, $value)
-    {
-        $this->setAttribute($name, $value);
     }
 
 }

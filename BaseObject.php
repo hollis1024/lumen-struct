@@ -1,11 +1,11 @@
 <?php
 
-namespace hollis1024\LumenStruct;
+namespace hollis1024\lumen\struct;
 
 
-use App\Components\Exceptions\InvalidCallException;
-use App\Components\Exceptions\UnknownMethodException;
-use App\Components\Exceptions\UnknownPropertyException;
+use hollis1024\lumen\struct\Exceptions\InvalidCallException;
+use hollis1024\lumen\struct\Exceptions\UnknownMethodException;
+use hollis1024\lumen\struct\Exceptions\UnknownPropertyException;
 
 class BaseObject
 {

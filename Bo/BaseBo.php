@@ -1,9 +1,9 @@
 <?php
 
-namespace hollis1024\LumenStruct\Bo;
+namespace hollis1024\lumen\struct\Bo;
 
 
-use App\Components\Model\FormModel;
+use xbull\lumen\struct\Model\FormModel;
 
 class BaseBo extends FormModel
 {

@@ -1,5 +1,5 @@
 <?php
-namespace hollis1024\LumenStruct\Repository;
+namespace hollis1024\lumen\struct\Repository;
 
 /**
  * Interface CriteriaInterface
