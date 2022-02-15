@@ -28,8 +28,11 @@ trait ModelAttributes
      */
     public function setAttributes($values) {
         if (is_array($values)) {
+            $attributes = array_flip($this->attributes());
             foreach ($values as $name => $value) {
-                $this->hasAttribute($name) && $this->setAttribute($name, $value);
+                if (isset($attributes[$name])) {
+                    $this->$name = $value;
+                }
             }
         }
     }
@@ -54,12 +57,7 @@ trait ModelAttributes
     public function setAttribute($name, $value)
     {
         if ($this->hasAttribute($name)) {
-            $setter = 'set' . $name;
-            if (method_exists($this, $setter)) {
-                $this->$setter($value);
-            } else {
-                $this->$name = $value;
-            }
+            $this->$name = $value;
         } else {
             throw new \InvalidArgumentException(get_class($this) . ' has no attribute named "' . $name . '".');
         }
@@ -74,7 +72,7 @@ trait ModelAttributes
     {
         $class = new \ReflectionClass($this);
         $names = [];
-        foreach ($class->getProperties(\ReflectionProperty::IS_PUBLIC) as $property) {
+        foreach ($class->getProperties(\ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED | \ReflectionProperty::IS_PRIVATE) as $property) {
             if (!$property->isStatic()) {
                 $names[] = $property->getName();
             }
