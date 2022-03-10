@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "hollisho\\lumenstruct\\": "src"
+      "hollis1024\\lumen\\struct\\": "src"
     }
   }
 }
