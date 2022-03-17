@@ -5,5 +5,5 @@ namespace hollis1024\lumen\struct\Exceptions;
 
 class BusinessException extends \Exception
 {
-    protected $code = -1;
+    protected $code = 10000;
 }
