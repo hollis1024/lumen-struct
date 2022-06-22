@@ -36,8 +36,7 @@ class BaseRequestBo extends BaseBo
     {
         if ($this->autoLoad) {
             if ($request->isJson()) {
-                $data = $request->json();
-                $data = json_decode($data, true);
+                $data = $request->json()->all();
             } else if ($request->isMethod('GET')) {
                 $data = $request->query();
             } else {
