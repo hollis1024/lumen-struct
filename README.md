@@ -1,4 +1,4 @@
-## lumen-struct
+## Lumen Struct
 
 ## 一、代码结构
 
